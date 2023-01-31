@@ -17,6 +17,7 @@ const MovieDetalis = () => {
   const location = useLocation();
  
 
+
   useEffect(() => {
     fetchApiDetalis(movieId)
       .then(respons => {
