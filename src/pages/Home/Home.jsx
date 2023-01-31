@@ -2,7 +2,6 @@ import { useState, useEffect, Suspense } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { fetchApi } from 'service/service';
 import { Box, H2 } from './Home.styled';
-// import { DefaultMassage } from 'components/DefaultComponent/DefaultComponent.styled';
 
  const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -18,7 +17,6 @@ import { Box, H2 } from './Home.styled';
         return Promise.reject(new Error('Sorry no info'));
       })
       .then(data => setMovies(data.results))
-      // console.log(data))
       .catch(error => console.log(error));
   }, []);
 
@@ -37,7 +35,7 @@ import { Box, H2 } from './Home.styled';
           </li>
         ))}
       </Box>
-      <Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
     </>

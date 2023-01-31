@@ -9,13 +9,13 @@ import {
   AdditionalBox,
   ButtonBack,
 } from './MovieDetails.styled';
-import { DefaultMassage } from 'components/DefaultComponent/DefaultComponent.styled';
+import DefaultComponent from 'components/DefaultComponent/DefaultComponent';
 
 const MovieDetalis = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
   const location = useLocation();
-  const [defMas] = useState(false);
+ 
 
   useEffect(() => {
     fetchApiDetalis(movieId)
@@ -24,21 +24,21 @@ const MovieDetalis = () => {
           return respons.json();
         }
         return Promise.reject(new Error('Sorry no info'));
-        //  setDefMas(true)
       })
       .then(data => setMovie(data))
-      .catch(error => console.log(error));
+      .catch(error =>console.log(error));
   }, [movieId]);
 
+
+  
+  console.log(movie);
   if (!movie) {
-    return null;
+    return <DefaultComponent />;
   }
   const { poster_path, original_title, overview, genres } = movie;
 
-  console.log(defMas);
   return (
     <Wrap>
-      {defMas && <DefaultMassage />}
       <Link to={location.state?.from ?? '/'}>
         <ButtonBack>Go back</ButtonBack>
       </Link>
@@ -79,7 +79,7 @@ const MovieDetalis = () => {
           </Link>
         </li>
       </AdditionalBox>
-      <Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
     </Wrap>

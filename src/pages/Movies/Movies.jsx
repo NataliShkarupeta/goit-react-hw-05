@@ -46,7 +46,7 @@ import { useEffect } from 'react';
               </li>
             ))}
           </Box>
-          <Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
             <Outlet />
           </Suspense>
         </>

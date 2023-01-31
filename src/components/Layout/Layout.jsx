@@ -13,7 +13,7 @@ import { Outlet } from 'react-router-dom';
           <StyledLink to="/movies">Movies</StyledLink>
         </Nav>
       </Div>
-      <Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
     </>
