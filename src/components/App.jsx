@@ -1,4 +1,3 @@
-
 import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 
@@ -22,8 +21,8 @@ export const App = () => {
           <Route path="cast" element={<Cast />} />
           <Route path="reviews" element={<Reviews />} />
         </Route>
+        <Route path="*" element={<DefaultComponent />} />
       </Route>
-      <Route path="*" element={<DefaultComponent />} />
     </Routes>
   );
 };
