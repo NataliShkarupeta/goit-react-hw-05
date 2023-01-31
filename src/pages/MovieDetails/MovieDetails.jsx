@@ -31,8 +31,6 @@ const MovieDetalis = () => {
   }, [movieId]);
 
 
-  
-  console.log(movie);
   if (!movie) {
     return <DefaultComponent />;
   }

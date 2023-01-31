@@ -22,7 +22,6 @@ const Cast =()=>{
 if (!actors){
   return null
 } 
-//  console.log('cast', actors);
 return actors.map(({ character, original_name, profile_path, id }) => (
   <li key={id}>
     <img
@@ -30,7 +29,7 @@ return actors.map(({ character, original_name, profile_path, id }) => (
       alt={original_name}
     />
     <p>{original_name}</p>
-    <p>Character:{character}</p>
+    <p>Character: {character}</p>
   </li>
 ));
 }
