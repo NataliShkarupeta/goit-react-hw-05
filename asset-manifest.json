@@ -1,29 +1,29 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-05/static/js/main.53ebd4ed.js",
+    "main.js": "/goit-react-hw-05/static/js/main.09fbd0af.js",
     "static/js/33.a3b240c3.chunk.js": "/goit-react-hw-05/static/js/33.a3b240c3.chunk.js",
     "static/js/544.d8f65ecb.chunk.js": "/goit-react-hw-05/static/js/544.d8f65ecb.chunk.js",
     "static/js/84.98c8842f.chunk.js": "/goit-react-hw-05/static/js/84.98c8842f.chunk.js",
     "static/js/936.4ed8da88.chunk.js": "/goit-react-hw-05/static/js/936.4ed8da88.chunk.js",
     "static/js/815.631851f5.chunk.js": "/goit-react-hw-05/static/js/815.631851f5.chunk.js",
-    "static/js/247.4cba61ce.chunk.js": "/goit-react-hw-05/static/js/247.4cba61ce.chunk.js",
+    "static/js/247.70837bf0.chunk.js": "/goit-react-hw-05/static/js/247.70837bf0.chunk.js",
     "static/js/779.dcd1788e.chunk.js": "/goit-react-hw-05/static/js/779.dcd1788e.chunk.js",
     "static/js/881.dea508f7.chunk.js": "/goit-react-hw-05/static/js/881.dea508f7.chunk.js",
     "index.html": "/goit-react-hw-05/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-05/static/css/main.7acaea2f.css.map",
-    "main.53ebd4ed.js.map": "/goit-react-hw-05/static/js/main.53ebd4ed.js.map",
+    "main.09fbd0af.js.map": "/goit-react-hw-05/static/js/main.09fbd0af.js.map",
     "33.a3b240c3.chunk.js.map": "/goit-react-hw-05/static/js/33.a3b240c3.chunk.js.map",
     "544.d8f65ecb.chunk.js.map": "/goit-react-hw-05/static/js/544.d8f65ecb.chunk.js.map",
     "84.98c8842f.chunk.js.map": "/goit-react-hw-05/static/js/84.98c8842f.chunk.js.map",
     "936.4ed8da88.chunk.js.map": "/goit-react-hw-05/static/js/936.4ed8da88.chunk.js.map",
     "815.631851f5.chunk.js.map": "/goit-react-hw-05/static/js/815.631851f5.chunk.js.map",
-    "247.4cba61ce.chunk.js.map": "/goit-react-hw-05/static/js/247.4cba61ce.chunk.js.map",
+    "247.70837bf0.chunk.js.map": "/goit-react-hw-05/static/js/247.70837bf0.chunk.js.map",
     "779.dcd1788e.chunk.js.map": "/goit-react-hw-05/static/js/779.dcd1788e.chunk.js.map",
     "881.dea508f7.chunk.js.map": "/goit-react-hw-05/static/js/881.dea508f7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.53ebd4ed.js"
+    "static/js/main.09fbd0af.js"
   ]
 }
