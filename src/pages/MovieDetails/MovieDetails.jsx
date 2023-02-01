@@ -15,8 +15,6 @@ const MovieDetalis = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
   const location = useLocation();
- 
-
 
   useEffect(() => {
     fetchApiDetalis(movieId)
@@ -27,12 +25,18 @@ const MovieDetalis = () => {
         return Promise.reject(new Error('Sorry no info'));
       })
       .then(data => setMovie(data))
-      .catch(error =>console.log(error));
+      .catch(error => console.log(error));
   }, [movieId]);
 
-
   if (!movie) {
-    return <DefaultComponent />;
+    return (
+      <>
+        <Link to={location.state?.from ?? '/'}>
+          <ButtonBack>Go back</ButtonBack>
+        </Link>
+        <DefaultComponent />
+      </>
+    );
   }
   const { poster_path, original_title, overview, genres } = movie;
 

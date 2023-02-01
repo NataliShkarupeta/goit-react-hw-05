@@ -16,13 +16,10 @@ const Reviews = () => {
         return Promise.reject(new Error('Sorry no image'));
       })
       .then(data => setReviews(data.results))
-      // console.log('reviews', data.results))
       .catch(error => console.log(error));
   }, [movieId]);
 
-  if (!reviews) {
-    return null;
-  }
+ 
 
   return (
     <>

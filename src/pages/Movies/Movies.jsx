@@ -1,25 +1,24 @@
-import { Suspense, useState } from 'react';
+import {  useState } from 'react';
 import { SearchField } from 'components/SearchField/SEarcoField';
 import { fetchApiQuery } from 'service/service';
-import { Link, useSearchParams, Outlet, useLocation } from 'react-router-dom';
+import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import { Box } from 'pages/Home/Home.styled';
 import { useEffect } from 'react';
+import DefaultComponent from 'components/DefaultComponent/DefaultComponent';
 
- const Movies = () => {
-  const [movies, setMovies] = useState(null);
+const Movies = () => {
+  const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get('query') ?? '';
   const location = useLocation();
 
-
+  
   const searchWord = queryWord => {
     setSearchParams(queryWord !== '' ? { query: queryWord } : {});
   };
 
-
   useEffect(() => {
-
-    if (query !== '' )
+    if (query !== '')
       fetchApiQuery(query)
         .then(respons => {
           if (respons.ok) {
@@ -32,10 +31,14 @@ import { useEffect } from 'react';
         .catch(error => console.log(error));
   }, [query]);
 
+  
   return (
     <>
       <SearchField searchWord={searchWord} query={query} />
-      {movies && (
+
+      {movies.length === 0 && query!== '' ? (
+        <DefaultComponent />
+      ) : (
         <>
           <Box>
             {movies.map(movie => (
@@ -46,9 +49,6 @@ import { useEffect } from 'react';
               </li>
             ))}
           </Box>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Outlet />
-          </Suspense>
         </>
       )}
     </>

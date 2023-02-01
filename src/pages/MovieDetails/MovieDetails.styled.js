@@ -25,4 +25,5 @@ export const AdditionalBox = styled.div`
 
 export const ButtonBack = styled.button`
 margin-bottom: 15px;
+margin-top: 10px;
 `

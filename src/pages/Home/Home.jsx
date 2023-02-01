@@ -1,8 +1,8 @@
-import { useState, useEffect, Suspense } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { fetchApi } from 'service/service';
 import { Box, H2 } from './Home.styled';
-
+import DefaultComponent from 'components/DefaultComponent/DefaultComponent';
  const Home = () => {
   const [movies, setMovies] = useState([]);
   const location = useLocation();
@@ -20,8 +20,8 @@ import { Box, H2 } from './Home.styled';
       .catch(error => console.log(error));
   }, []);
 
-  if (!movies) {
-    return;
+  if (movies.length === 0) {
+    return <DefaultComponent/>
   }
   return (
     <>
@@ -35,9 +35,7 @@ import { Box, H2 } from './Home.styled';
           </li>
         ))}
       </Box>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Outlet />
-      </Suspense>
+      
     </>
   );
 };
